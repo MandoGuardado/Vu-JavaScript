@@ -13,19 +13,17 @@
 <body>
 
   <div id="vue-app">
-    <h1>Events</h1>
-    <!-- The once modifiers only allows the click to happen once -->
-    <button v-on:click.once = 'add(1)'>Add a Year</button>
-    <button v-on:click = 'subtract(1)'>Subtract a Year</button>
-    <button v-on:dblclick = 'add(10)'>Add 10 years</button>
-    <button v-on:dblclick  = 'subtract(10)'>Subtract 10 Years</button>
-    <p>My age is {{age}} </p>
-    <div id="canvas" v-on:mousemove = 'updateYX'>{{x}},{{y}}</div>
-    <!-- The prevent modifier prevents the normal behavior from happenig -->
-    <a v-on:click.prevent ="click" href="http://www.thenetninja.com"> The Net Ninja</a>
+    <h1>Keyboard Events</h1>
+    <label>Name:</label>
+    <!-- Keyboard events can also have modifiers  -->
+    <input type="text" v-on:keyup.enter = 'logName'/>
+    <label>Age:</label>
+    <!-- It can also be multiple modifiers. Using the . notation -->
+    <input type="text" v-on:keyup.alt.enter = 'logAge'>
+    
   </div>
 
   <script src="app.js"></script>
-</body>
+</body> 
 
 </html>

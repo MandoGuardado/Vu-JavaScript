@@ -6,20 +6,11 @@ new Vue({
    x:0
   },
   methods:{
-    add:function(value){
-      return this.age += value;
+    logName: function(){
+      console.log("Printed name");
     },
-    subtract:function(value){
-      return this.age -= value;
-    },
-    updateYX: function(event){
-      console.log(event);
-      this.x = event.offsetX;
-      this.y = event.offsetY;
-    },
-    // click function used to test modifiers
-    click:function(){
-      alert("You clicked me!")
+    logAge: function(){
+      console.log("Printed age");
     }
 
   }
