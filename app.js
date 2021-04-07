@@ -16,6 +16,10 @@ new Vue({
       console.log(event);
       this.x = event.offsetX;
       this.y = event.offsetY;
+    },
+    // click function used to test modifiers
+    click:function(){
+      alert("You clicked me!")
     }
 
   }

@@ -14,12 +14,15 @@
 
   <div id="vue-app">
     <h1>Events</h1>
-    <button v-on:click = 'add(1)'>Add a Year</button>
+    <!-- The once modifiers only allows the click to happen once -->
+    <button v-on:click.once = 'add(1)'>Add a Year</button>
     <button v-on:click = 'subtract(1)'>Subtract a Year</button>
     <button v-on:dblclick = 'add(10)'>Add 10 years</button>
     <button v-on:dblclick  = 'subtract(10)'>Subtract 10 Years</button>
     <p>My age is {{age}} </p>
     <div id="canvas" v-on:mousemove = 'updateYX'>{{x}},{{y}}</div>
+    <!-- The prevent modifier prevents the normal behavior from happenig -->
+    <a v-on:click.prevent ="click" href="http://www.thenetninja.com"> The Net Ninja</a>
   </div>
 
   <script src="app.js"></script>
