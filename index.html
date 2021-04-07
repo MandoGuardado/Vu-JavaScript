@@ -1,20 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VueJS Tutorials</title>
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VueJS Tutorials</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+  <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
-    <div id="vue-app">
-        <h1>{{FirstName}} </h1>
-        <h2>{{lastName}}</h2>
-    </div>
+  <div id="vue-app">
+    <p>{{firstName}} </p>
+    <p>{{lastName}}</p>
+    <p>{{greet('Evenning')}}</p>
+  </div>
 
-    <script src="app.js"></script>
+  <script src="app.js"></script>
 </body>
-</html> 
+
+</html>
