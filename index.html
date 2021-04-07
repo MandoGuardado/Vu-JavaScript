@@ -13,15 +13,13 @@
 <body>
 
   <div id="vue-app">
-    <p>{{firstName}} </p>
-    <p>{{lastName}}</p>
-    <p>{{job}}</p>
-    <p>{{greet('Night')}}</p>
-    <!-- Binds dynamic data from Vue Instance to html attribute -->
-    <a v-bind:href='website'> Google webpage</a>
-    <input type="text" v-bind:value="job">
-    <!-- Binds dynamic HTML to another html tag  -->
-    <p v-html="websiteTag"></p>
+    <h1>Events</h1>
+    <button v-on:click = 'add(1)'>Add a Year</button>
+    <button v-on:click = 'subtract(1)'>Subtract a Year</button>
+    <button v-on:dblclick = 'add(10)'>Add 10 years</button>
+    <button v-on:dblclick  = 'subtract(10)'>Subtract 10 Years</button>
+    <p>My age is {{age}} </p>
+    <div id="canvas" v-on:mousemove = 'updateYX'>{{x}},{{y}}</div>
   </div>
 
   <script src="app.js"></script>
