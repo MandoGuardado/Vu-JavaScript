@@ -2,12 +2,15 @@ new Vue({
   el: '#vue-app',
   data: {
     firstName: 'Armando',
-    lastName: "Guardado"
+    lastName: "Guardado",
+    job: 'Programmer',
+    website: 'www.google.com',
+    websiteTag: '<a href="www.yahoo.com">Yahoo website</a>'
   },
   methods:{
-    greet:function(type){
+    greet:function(timeOfDay){
 
-      return 'Good ' + type + ' ' + this.firstName
+      return 'Good ' + timeOfDay + ' ' + this.firstName
     }
   }
 

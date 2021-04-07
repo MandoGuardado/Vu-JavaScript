@@ -15,7 +15,13 @@
   <div id="vue-app">
     <p>{{firstName}} </p>
     <p>{{lastName}}</p>
-    <p>{{greet('Evenning')}}</p>
+    <p>{{job}}</p>
+    <p>{{greet('Night')}}</p>
+    <!-- Binds dynamic data from Vue Instance to html attribute -->
+    <a v-bind:href='website'> Google webpage</a>
+    <input type="text" v-bind:value="job">
+    <!-- Binds dynamic HTML to another html tag  -->
+    <p v-html="websiteTag"></p>
   </div>
 
   <script src="app.js"></script>
