@@ -1,17 +1,11 @@
-span{
+.error{
     background: red;
-    display: inline-block;
     padding: 10px;
-    color: #fff;
-    margin: 10px 0;
+    color: white;
 }
 
-.available span{
+.success{
     background: green;
+    padding: 10px;
+    color: white;
 }
-
-.nearby span:after{
-    content: "nearby";
-    margin-left: 10px;
-}
-    
