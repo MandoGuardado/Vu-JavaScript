@@ -1,29 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>VueJS Tutorials</title>
+        <link href="styles.css" rel="stylesheet" />
+        <script src="https://unpkg.com/vue"></script>
+    </head>
+    <body>
+        <div id="vue-app">
+            <h1>Keyboard Events</h1>
+            <label>Name:</label>
+            <input type="text" v-on:keyup.enter="logName" v-model="name" />
+            <span>{{ name }}</span>
+            <label>Age:</label>
+            <input type="text" v-on:keyup.alt.enter="logAge" v-model="age" />
+            <span>{{ age }}</span>
+        </div>
+    </body>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>VueJS Tutorials</title>
-  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
-  <link rel="stylesheet" href="styles.css">
-</head>
-
-<body>
-
-  <div id="vue-app">
-    <h1>Keyboard Events</h1>
-    <label>Name:</label>
-    <!-- Keyboard events can also have modifiers  -->
-    <input type="text" v-on:keyup.enter = 'logName'/>
-    <label>Age:</label>
-    <!-- It can also be multiple modifiers. Using the . notation -->
-    <input type="text" v-on:keyup.alt.enter = 'logAge'>
-    
-  </div>
-
-  <script src="app.js"></script>
-</body> 
-
+    <script src="app.js"></script>
 </html>
