@@ -2,7 +2,7 @@
 <template>
     <ul>
         <!-- has to be capital V, was giving me an error using small case v. -->
-        <li V-for="ninja in ninjas">{{ ninja }}</li>
+        <li v-for="ninja in ninjas">{{ninja }}</li>
     </ul>
 </template>
 
