@@ -10,16 +10,17 @@
 </template>
 <script>
 export default {
+    // props- are the items beign sent by parent file. 
+    props: {
+      ninjas: {
+        //   This helps with validation as the props expects array, if not array then it will throw error.
+        type: Array,
+        // This will also faile if props are not passed in, as they are required now
+        required: true
+      }
+    },
     data(){
         return{
-            ninjas: [
-                {name: 'Ryu', speciality: 'Vue Components', show: false},
-                {name: 'Crystal', speciality: 'HTML Wizardry', show: false},
-                {name: 'Hitoshi', speciality: 'Click Events', show: false},
-                {name: 'Tango', speciality: 'Conditionals', show: false},
-                {name: 'Kami', speciality: 'Webpack', show: false},
-                {name: 'Yoshi', speciality: 'Data Diggin', show: false}
-            ]
         }
     }
 }
