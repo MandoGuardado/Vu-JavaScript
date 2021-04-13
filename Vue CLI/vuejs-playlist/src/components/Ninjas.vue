@@ -1,27 +1,30 @@
 <template>
     <div id="ninjas">
         <ul>
-            <li v-bind:key = "ninja.id" v-for="ninja in ninjas" v-on:click="ninja.show = !ninja.show">
+            <li v-bind:key="ninja" v-for="ninja in ninjas" v-on:click="ninja.show = !ninja.show">
                 <h2>{{ ninja.name }}</h2>
                 <h3 v-show="ninja.show">{{ ninja.speciality }}</h3>
             </li>
         </ul>
+        <button v-on:click="deleteNinja">Delete a Ninja</button>
     </div>
 </template>
 <script>
 export default {
-    // props- are the items beign sent by parent file. 
     props: {
       ninjas: {
-        //   This helps with validation as the props expects array, if not array then it will throw error.
         type: Array,
-        // This will also faile if props are not passed in, as they are required now
         required: true
       }
     },
     data(){
         return{
         }
+    },
+    methods: {
+      deleteNinja: function(){
+        this.ninjas.pop();
+      }
     }
 }
 </script>

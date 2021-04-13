@@ -1,14 +1,15 @@
 <template>
     <div>
-        <app-header></app-header>
-        <!-- using v-bind ensure that ninjas array is being sent to the ninjas.vue file -->
+        <app-header v-bind:title="title"></app-header>
         <app-ninjas v-bind:ninjas="ninjas"></app-ninjas>
-        <app-footer></app-footer>
+        <hr>
+        <app-ninjas v-bind:ninjas="ninjas"></app-ninjas>
+        <app-footer v-bind:title="title"></app-footer>
     </div>
 </template>
 
 <script>
-// Imports-All components are considred child of this file
+// Imports
 import Header from './components/Header.vue';
 import Footer from './components/Footer.vue';
 import Ninjas from './components/Ninjas.vue';
@@ -27,11 +28,24 @@ export default {
               {name: 'Tango', speciality: 'Conditionals', show: false},
               {name: 'Kami', speciality: 'Webpack', show: false},
               {name: 'Yoshi', speciality: 'Data Diggin', show: false}
-          ]
+          ],
+          title: 'Vue Ninjas'
         }
+    },
+    methods: {
+      updateTitle: function(updatedTitle){
+        this.title = updatedTitle;
+      }
     }
 }
 </script>
+
+<style>
+body{
+    margin: 0;
+    font-family: 'Nunito SemiBold';
+}
+</style>
 
 <style>
 body{
