@@ -1,4 +1,3 @@
-
 <template>
     <div>
         <app-header v-bind:title="title" v-on:changeTitle="updateTitle($event)"></app-header>

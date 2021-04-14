@@ -1,4 +1,3 @@
-
 <template>
     <header>
         <h1 v-on:click="changeTitle">{{ title }}</h1>
@@ -24,6 +23,25 @@ export default {
         this.title = 'Vue Ninjas';
         bus.$emit('titleChanged', 'Vue Ninjas');
       }
+    },
+    // lifecycle hooks
+    beforeCreate(){
+        alert('beforeCreate');
+    },
+    created(){
+        alert('created');
+    },
+    beforeMount(){
+        alert('beforeMount');
+    },
+    mounted(){
+        alert('mounted');
+    },
+    beforeUpdate(){
+        alert('beforeUpdate');
+    },
+    updated(){
+        alert('updated');
     }
 }
 </script>
