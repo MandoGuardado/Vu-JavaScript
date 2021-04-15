@@ -29,7 +29,7 @@
             <p style="white-space: pre">{{ blog.content }}</p>
             <p>Blog Categories:</p>
             <ul>
-                <li v-for="category in blog.categories">{{ category }}</li>
+                <li v-bind:key="category" v-for="category in blog.categories">{{ category }}</li>
             </ul>
             <p>Author: {{ blog.author }}</p>
         </div>
